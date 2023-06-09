@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and test with Gradle
         run: |
-          ./gradlew.bat clean test
+          ./gradlew build --scan --no-daemon
       
       - name: Archive test report
         uses: actions/upload-artifact@v2
