@@ -1,6 +1,6 @@
 name: Gradle Test
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -12,8 +12,12 @@ jobs:
         with:
             java-version: '19'
             distribution: 'adopt'
+            cache: gradle
 
       - name: Build and test with Gradle
         run: |
           ./gradlew.bat clean test
-    
+          
+      
+
+
