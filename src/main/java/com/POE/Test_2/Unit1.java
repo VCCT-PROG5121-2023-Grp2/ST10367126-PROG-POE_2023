@@ -40,8 +40,7 @@ public class Unit1 {
         
         TaskClass task = core.task;
         task.increment_Loop();
-       // task.set_TaskDescription("Less than 50 words-------------------------------------------------END OF FILE-------------------------------------------------");
-          task.set_TaskDescription("Add login feature");
+        task.set_TaskDescription("Add login feature");
         value = task.checkTaskDescription(task.t_des[2]);
         
         setValue(value);

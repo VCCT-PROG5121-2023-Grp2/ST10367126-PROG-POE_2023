@@ -40,7 +40,7 @@ public class Unit1_2 {
         
         TaskClass task = core.task;
         task.increment_Loop();
-        task.set_TaskDescription("Less than 50 words-------------------------------------------------END OF FILE-------------------------------------------------");
+        task.set_TaskDescription("More than 50 words-----------------------------------------------------------------------------------");
         value = task.checkTaskDescription(task.t_des[2]);
         
         setValue(value);

@@ -1,15 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.POE.Test_2;
 import com.POE.TaskClass;
 
-//import com.POE.Test_2.Core_Test2;
 
 /**
  *
- * @author Alexi
+ * @author Jose Lubota
  */
 public class Unit2 {
     

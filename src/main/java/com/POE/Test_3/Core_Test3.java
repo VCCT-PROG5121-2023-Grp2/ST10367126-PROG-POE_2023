@@ -9,7 +9,7 @@ import com.POE.TaskClass;
  * @author Alexi
  */
 public class Core_Test3 {
-     TaskClass unitT3;
+    public TaskClass unitT3;
     
     public void createTask(){
         

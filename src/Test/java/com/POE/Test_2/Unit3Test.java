@@ -15,6 +15,9 @@ public class Unit3Test {
         int pastValue = test3.GetValue();
         int currentV = test3.GetValue2();
         
+        assertEquals(18,pastValue);
+        assertEquals(89,currentV);
+        
         System.out.println("\n" +pastValue +" on the last itertion of the loop");
         System.out.println("\n"+currentV + " for the additional data" );
                 

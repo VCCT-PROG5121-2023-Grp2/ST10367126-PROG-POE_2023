@@ -107,6 +107,20 @@ public class TaskClass {
         return id[loop];
     }
      
+     //-------------------
+     public String UpdateTaskID(int idx) {
+        String d = dev[idx];
+        String name = getNameBeforeSpace(d);
+
+        if (d == null) {
+            return "";
+        }
+  
+        id[idx] = t_name[idx].substring(0, 2) + ":" + t_num[idx] + ":" + name.substring(name.length() - 3, name.length());
+        id[idx] = id[idx].toUpperCase();
+        return id[idx];
+    }
+     
      
     //-------------------------------------------------------
     //------------------- 
@@ -116,7 +130,7 @@ public class TaskClass {
         createTaskDescription();
         verifyCheckDescription();
         InsertDevName();
-         setTotalHours();
+        setTotalHours();
         createTaskID();
         createTaskStatus();
         increment_Loop();
@@ -129,7 +143,7 @@ public class TaskClass {
     
     public void increment_TNum(){
          if(loop==0){
-            t_num[loop]=1;
+            t_num[loop]=0;
         }else{
             t_num[loop]= 1 + t_num[loop-1];
         }

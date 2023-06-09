@@ -7,6 +7,7 @@ package com.POE.Test_2;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
 /**
  *
  * @author Alexi
@@ -23,14 +24,14 @@ public class Unit2Test {
     @Test
     public void testMain() {
         System.out.println("-------------------------------------------------------------------------");
-        System.out.println("------ Unit Test 2- Test 2");
+        System.out.println("------ Unit Test 2 - Test 2.1");
         test.main(null);
-        String[] value = test.GetActual();
-        for(int i =0; i<=1;i++){
-             System.out.println("\n" +value[i]);
-        }
-       
+        String[] setID = test.GetActual();
+        assertEquals("AD:1:IKE",setID[1]);
+        System.out.println(setID[1]);
         
+        
+        
+        } 
     }
     
-}
