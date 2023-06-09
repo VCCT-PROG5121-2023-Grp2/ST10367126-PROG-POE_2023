@@ -1,4 +1,4 @@
-name: Gradle Build
+name: Gradle Build and Test
 
 on:
   push:
@@ -19,6 +19,4 @@ jobs:
         java-version: '11'
     
     - name: Build and test with Gradle
-      run: ./gradlew clean test --distribution ${{ inputs.distribution }}
-      env:
-        distribution: 'wrapper'
+      run: ./gradlew clean test
