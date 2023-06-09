@@ -12,10 +12,12 @@ jobs:
         with:
             java-version: '19'
             distribution: 'adopt'
-      - name: Build with Gradle
+      - name: Make Gradlew executable
         run: |
-            chmod +x gradlew
-            shell: bash
-            - name: Build and test with Gradle
-              run: ./gradlew clean test
+          gradlew.bat tasks
+          chmod +x gradlew
+
+      - name: Build and test with Gradle
+        run: |
+          ./gradlew clean test
     
