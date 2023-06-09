@@ -14,30 +14,10 @@ public class Unit_Test3 {
     @Test
     public void Unit_Test(){
         ut.testMain();
-    }
-    
-    @Test
-    public void Unit_Test2(){
         ut2.testMain();
-    }
-    
-    @Test
-    public void Unit_Test3(){
         ut3.testMain();
-    }
-    
-    @Test
-    public void Unit_Test4(){
         ut4.testMain();
-    }
-    
-    @Test
-    public void Unit_Test5(){
         ut5.testMain();
-    }
-    
-    @Test
-    public void Unit_Test6(){
         ut6.testMain();
     }
     

@@ -11,21 +11,11 @@ public class Unit_Test2 {
     Unit3Test ut5 = new Unit3Test();
     
     @Test
-    public void Unit_Test_1(){
+    public void Unit_Test2(){
         ut.testMain();
         ut2.testMain();
-    }
-    
-    @Test
-    public void Unit_Test2(){
         ut3.testMain();
         ut4.testMain();
-    }
-    
-    @Test
-    public void Unit_Test3(){
         ut5.testMain();
-    }
-    
-    
+    }  
 }
