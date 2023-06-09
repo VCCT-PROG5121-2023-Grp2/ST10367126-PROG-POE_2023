@@ -1,6 +1,6 @@
 name: Gradle Test
 
-on:[ main]
+on:[main]
 
 jobs:
   build:
