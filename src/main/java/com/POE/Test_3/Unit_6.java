@@ -18,7 +18,7 @@ public class Unit_6 {
         core.createTask();
         TaskClass task = core.unitT3;
         
-        task.returnDetails();
+        task.printTaskDetails();
     }  
 }
 //-------------------------------------------------END OF FILE-------------------------------------------------//
