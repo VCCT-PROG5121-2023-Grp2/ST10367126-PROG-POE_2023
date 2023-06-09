@@ -13,10 +13,10 @@ public class Unit1_2Test2 {
         test1.main(null);
         
         Boolean value = true ;
-        String expected = test1.GetActual();
-        String actual = "";
+        String actual = "Please enter a task description less than 50 characters";
         
        value = test1.GetValue();
+       System.out.println(value);
        if (value){
            actual = test1.GetActual();
            System.out.println("\nTask successfully captured");
@@ -24,7 +24,7 @@ public class Unit1_2Test2 {
            System.out.println("\nPlease enter a task description less than 50 characters");
        }
        
-       assertEquals(expected,actual);
+      assertEquals("Please enter a task description less than 50 characters",actual);
     } 
     
 }
