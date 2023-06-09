@@ -12,11 +12,8 @@ jobs:
         with:
             java-version: '19'
             distribution: 'adopt'
-      - name: Make Gradlew wrapper executable
-        run: |
-          chmod +x gradlew-wrapper.jar
 
       - name: Build and test with Gradle
         run: |
-          java -jar gradlew-wrapper.jar clean test
+          ./gradlew.bat clean test
     
