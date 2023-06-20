@@ -166,7 +166,6 @@ public  boolean password_matcher(String password){
 //-----------------------------------------------------------------------------------
    // ----- SETTERS -------------
    public String registerUser(String un, String pw){
-        JOptionPane.showMessageDialog(null,"Registerin user...");
        
        if( c_UserName(Username) && c_PasswordComplexity()){
             Register_UN = un;
