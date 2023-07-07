@@ -22,7 +22,7 @@ public class TaskClass {
     public int num = 0;
     
    //-------------------------...POE Methods-------------------------------------------------//
-    //-------------------
+    //-------------- Create the Dev ID
      public String createTaskID() {
         String d = dev[loop];
         String name = getNameBeforeSpace(d);
@@ -35,7 +35,7 @@ public class TaskClass {
         id[loop] = id[loop].toUpperCase();
         return id[loop];
     }
-    //-------------------------
+    //------------------------- Return true or false depending if the task description meet the requirments 
     public boolean checkTaskDescription(String D) {
         if(D.length() > 50) {
             return false;
@@ -43,7 +43,7 @@ public class TaskClass {
             return true;
         }
     }
-        //----------
+    //---------- Output all task values
      public String printTaskDetails(){
         loopR=0;
         while(loopR<loop){
@@ -62,6 +62,7 @@ public class TaskClass {
         
     }
     //---------------------------------------
+     //-------- Returns the sum of all hours
     public int returnTotalHours() {
         int h = 0;
         for (count = 0;count <=loop; count++){
@@ -76,70 +77,69 @@ public class TaskClass {
 //-------------------------------Setters----------------------//
     
     //---------------------------------------
+    //-- Set the task name
     public void set_TaskName(String TN){
         this.t_name [loop] = TN;
     }
     
     //---------------------------------------
+        //-- Set the task description
     public void set_TaskDescription(String TDes){
         this.t_des[loop] = TDes;
     }
     
-    //---------------------------------------    
+    //---------------------------------------   
+    //-- Set the task dev name
     public void set_TaskDevDetails(String DD){
         this.dev[loop] = DD;
     }
     
     //---------------------------------------
+    //-- Set the task status
     public void set_TaskStatus(String Tstatus){
         this.t_status[loop] = Tstatus;
     }
     
     //---------------------------------------
+    //-- Set the task duration
     public void set_TaskDuration(int TDur){
         this.t_duration[loop] = TDur;
     }
-    
-    //---------------------------------------
-    public void set_TaskNam(String TN){
-        this.t_name [loop] = TN;
-    }
-    
-    
+
+
     //---------------------------GETTERS-----------------------------------------------------//
+    
     //-------------------------------
+    //-- Return the task name
     public String get_TaskName(int index){
         return t_name[index];
     }
     //-------------------------------
+    //-- Return the task description
     public String get_TaskDescription(int index){
         return t_des[index];
     }
     
     //-------------------------------   
+    //-- Return the dev name
     public void get_TaskDevDetails(String DD){
         this.dev[loop] = DD;
     }
     
     //-------------------------------
+    //-- Return the task status
     public void get_TaskStatus(String Tstatus){
         this.t_status[loop] = Tstatus;
     }
     
     //-------------------------------
+    //-- Return the task duration
     public void get_TaskDuration(int TDur){
         this.t_duration[loop] = TDur;
     }
     
-    //-------------------------------
-    public void get_TaskNam(String TN){
-        this.t_name [loop] = TN;
-    }
-    
-    
-    
  //---------------------------------------AUTOMATION------------------------------------------------//
-        //-------------------
+    //--------- Increment the task number
     public void increment_TNum(){
          if(loop==0){
             t_num[loop]=0;
@@ -148,12 +148,15 @@ public class TaskClass {
         }
     }
     //-----------------------
+    //--------- Increment the task loop
     public void increment_Loop(){
         loop = loop +1;   
     }
     
     //--------------------...Methods for Menu...---------------------------//
+    
     //----------------
+    //--------- Create a menu
     public void TaskMenuPrompt(){
         JOptionPane.showMessageDialog(null, "Welcome to EasyKanban");
         Boolean runner = true;
@@ -182,6 +185,7 @@ public class TaskClass {
         
     }
     //------------------- 
+    //--------- Output messages and input values for task variables
     public void enterValues() {
         increment_TNum();
         taskName();
@@ -213,27 +217,32 @@ public class TaskClass {
         }
     }
     //-------------------
+    //--------- Set task name with JOptionPane
      public String taskName() {
         t_name[loop] = JOptionPane.showInputDialog(null, "Insert the task name:");
         return "";
     }
     //-------------------
+    //--------- Set devname with JOptionPane
     public void InsertDevName() {
         dev[loop] = JOptionPane.showInputDialog(null, "Insert the developer name: "); 
     }
     
     //----------------------------
+    //--------- Set total hours with JOptionPane
     public String setTotalHours() {
         t_duration[loop] = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "Insert the number of hours spent on this task:"));
         return "";
     }
     //-----------------
+    //--------- Set task description with JOptionPane
     public String createTaskDescription() {
         t_des[loop] = JOptionPane.showInputDialog(null, "Insert the task description:");
         return "";
     }
     //--------------------
+    //--------- Verify if decription matches requirement and print message
      public void verifyCheckDescription() {
         if (checkTaskDescription(t_des[loop]) == false) {
             while (checkTaskDescription(t_des[loop]) == false) {
@@ -245,6 +254,7 @@ public class TaskClass {
         }
     }
     //----------------------------------
+    //--------- Print the task report 
     public void reportPrompt(){
         loopR=0;
         while(loopR<loop){
@@ -265,7 +275,8 @@ public class TaskClass {
     
     //--------------------------...OTHERS...-----------------------------//
     
-     //-------------------
+    //-------------------
+    //--------- Upadate a specific task ID
      public String UpdateTaskID(int idx) {
         String d = dev[idx];
         String name = getNameBeforeSpace(d);
@@ -278,7 +289,8 @@ public class TaskClass {
         id[idx] = id[idx].toUpperCase();
         return id[idx];
     }
-     
+    //--------------------
+    //--------- return all strings before the first space 
     public String getNameBeforeSpace(String newName) {
         String name;
         int spaceIndex = newName.indexOf(" ");

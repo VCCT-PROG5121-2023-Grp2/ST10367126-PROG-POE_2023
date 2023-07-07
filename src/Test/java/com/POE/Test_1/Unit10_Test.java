@@ -9,8 +9,7 @@ public class Unit10_Test {
     @Test
     public void testUnit10() {
         System.out.println("---------------------------");
-        System.out.println("Unit Test - 10");
-        System.out.println("---------------------------\n");
+        System.out.println("Unit Test - 10\n");
         
         t.main(null);
         Boolean actual = t.GetValue();

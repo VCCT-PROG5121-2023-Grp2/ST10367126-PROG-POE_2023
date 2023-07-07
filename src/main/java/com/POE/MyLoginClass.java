@@ -13,8 +13,7 @@ public class MyLoginClass {
     public String Register_UN ="3" ;
     public String Register_PW ="4" ;
     
-    public MyLoginClass(){
-        
+    public MyLoginClass(){   
     }
     
     public MyLoginClass(String FN, String SN, String UN, String PW){
@@ -27,46 +26,46 @@ public class MyLoginClass {
     // ----------------------------------------------- ---------------------------------------------
     // ----- SETTERS -------------
     
-     // ----- SETTERS -------------
+     // ----- Set the user name -------------
     public void setUserName(String UN){
         Username= UN;
     }
-     // ----- SETTERS -------------
+     // ----- Set the user surname -------------
     public void setSurname(String SN){
         Surname= SN;
     }
-     // ----- SETTERS -------------
+     // ----- Set the user first name -------------
     public void setFirstName(String FN){
         FirstName= FN;
     }
-     // ----- SETTERS -------------
+     // ----- Set the user password -------------
     public void setPassword(String PW){
         Password= PW;
     }
 
      // ----------------------------------------------- GETTERS ---------------------------------------------
-     // ----- SETTERS -------------
+     // ----- return the username -------------
      public String getUserName(){
        return Username;
     }
      
-     // ----- SETTERS -------------
+     // ----- return the surname  -------------
     public String getSurname(){
         return Surname;
     }
     
-    // ----- SETTERS -------------
+    // ----- return the firstname  -------------
     public String  getFirstName(){
         return FirstName;
     }
     
-    // ----- SETTERS -------------
+    // ----- return the password -------------
     public String  getPassword(){
         return Password;
     }
 
     //-------------------------------------------------- Conditions --------------------------------------------------------------
-     // ----- SETTERS -------------
+     // ----- Ensure if password is correct -------------
     public boolean checkUserName(){
         if(Username.length()<=5 && Username.contains("_")){
             if(Username.contains("_")){
@@ -82,7 +81,7 @@ public class MyLoginClass {
         return checkUserName();
         
     }
-     // ----- SETTERS -------------
+    // ----- Return true or false of the username is correct -------------
     public boolean c_UserName(String un){
         if(un.length()<=5 && un.contains("_")){
             if(un.contains("_")){
@@ -95,7 +94,7 @@ public class MyLoginClass {
     }
 
 //-----------------------------------------------------------------------------------
-// ----- SETTERS -------------
+// ----- Returns true or false whether  password matches the requirements 
 public  boolean password_matcher(String password){
     
     // Check if password is at least eight characters long
@@ -119,27 +118,9 @@ public  boolean password_matcher(String password){
     }
     
     return true;
-
-
-    /*if(Password.length()>=8){
-
-        String regex="(.*[A-Z].*)"
-                + "[!@#$%&*()_+=|<>?{}\\[\\]~-]"
-                + "[0-9]";
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(str);
-
-        if(m.matches()){
-            return true;
-        }else{
-            return false;    
-        }
-    }else{
-        return false;    
-    }*/
 }
 //-----------------------------------------------------------------------------------
-     // ----- SETTERS -------------
+     // -----Returns true of false whether  password matches the requirements and print a message -------------
     public boolean checkPasswordComplexity(){
 
         if(password_matcher(Password)){
@@ -152,7 +133,7 @@ public  boolean password_matcher(String password){
         }
         
     }
-     // ----- SETTERS -------------
+     // ----- Returns true of false whether tha variable password matches the requirements and print a message -------------
     public boolean c_PasswordComplexity(){
 
         if(password_matcher(Password)){
@@ -164,7 +145,7 @@ public  boolean password_matcher(String password){
     } 
 
 //-----------------------------------------------------------------------------------
-   // ----- SETTERS -------------
+   // ----- Register the user and returns messages depensing of the condition
    public String registerUser(String un, String pw){
        
        if( c_UserName(Username) && c_PasswordComplexity()){
@@ -194,7 +175,7 @@ public  boolean password_matcher(String password){
        }
    }
        
-      
+    // ----- Register the user and returns true or false if password and username are correct 
     public Boolean registerStatus(String un, String pw){
        
        if( c_UserName(Username) && c_PasswordComplexity()){
@@ -208,7 +189,7 @@ public  boolean password_matcher(String password){
        }
 
 
-    // ----- SETTERS -------------
+    // -----Verify if values assigned match the values registered 
     public boolean loginUser(String un , String pw){
 
         if (un.equals(Register_UN) && pw.equals(Register_PW)){
@@ -221,7 +202,7 @@ public  boolean password_matcher(String password){
         }
     
     }
-    // ----- SETTERS -------------
+    // -----Return messages depending on conditions -------------
     public String returnLoginStatus(){
         
         if(loginUser(Login_UN,Login_PW) == true ){
@@ -258,7 +239,7 @@ public  boolean password_matcher(String password){
 // ---------------------------------------------------------------------------------//
 // ---------------------------------------------------
     
-     // ----- SETTERS -------------
+     // ----- Output and Input for Class variables -------------
     public void setUser(){
         FirstName = JOptionPane.showInputDialog(null,"Enter your firstrname");
         Surname = JOptionPane.showInputDialog(null,"Enter your Surname");
@@ -267,7 +248,7 @@ public  boolean password_matcher(String password){
     }
     
     //-----------------------------
-    //----------------
+    //---------------- Create a Menu 
     public void loginMenuPrompt(){
         Boolean runner = true;
         int opt;

@@ -18,7 +18,7 @@ public class Core_Test3 {
         //------------------------------Test N-1----------------------------------//
         //-----
         unitT3.increment_TNum();
-        unitT3.set_TaskNam("Create Login");
+        unitT3.set_TaskName("Create Login");
         unitT3.set_TaskDescription("");
         unitT3.set_TaskDevDetails("Mike Smith");
         unitT3.set_TaskDuration(5);
@@ -28,7 +28,7 @@ public class Core_Test3 {
         
         //------------------------------Test N-2----------------------------------//
         unitT3.increment_TNum();
-        unitT3.set_TaskNam("Create Add Features");
+        unitT3.set_TaskName("Create Add Features");
         unitT3.set_TaskDescription("");
         unitT3.set_TaskDevDetails("Edward Harrington");
         unitT3.set_TaskDuration(8);
@@ -38,7 +38,7 @@ public class Core_Test3 {
        
         //------------------------------Test N-3----------------------------------//
         unitT3.increment_TNum();
-        unitT3.set_TaskNam("Create Reports");
+        unitT3.set_TaskName("Create Reports");
         unitT3.set_TaskDescription("");
         unitT3.set_TaskDevDetails("Samantha Paulson");
         unitT3.set_TaskDuration(2);
@@ -48,7 +48,7 @@ public class Core_Test3 {
         
         //------------------------------Test N-4----------------------------------//
         unitT3.increment_TNum();
-        unitT3.set_TaskNam("Add Arrays");
+        unitT3.set_TaskName("Add Arrays");
         unitT3.set_TaskDescription("Create Login to authenticate users");
         unitT3.set_TaskDevDetails("Glenda Oberholzer");
         unitT3.set_TaskDuration(11);
