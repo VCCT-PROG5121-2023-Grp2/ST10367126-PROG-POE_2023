@@ -192,8 +192,22 @@ public  boolean password_matcher(String password){
                 return"";
         }
        }
+   }
+       
+      
+    public Boolean registerStatus(String un, String pw){
+       
+       if( c_UserName(Username) && c_PasswordComplexity()){
+            Register_UN = un;
+            Register_PW = pw;
+            return true;
+            
+        }else{
+            return false;
+        }
+       }
 
-}
+
     // ----- SETTERS -------------
     public boolean loginUser(String un , String pw){
 
@@ -207,7 +221,7 @@ public  boolean password_matcher(String password){
         }
     
     }
-     // ----- SETTERS -------------
+    // ----- SETTERS -------------
     public String returnLoginStatus(){
         
         if(loginUser(Login_UN,Login_PW) == true ){
@@ -224,6 +238,21 @@ public  boolean password_matcher(String password){
 
         }
         return "";
+       
+    }
+    //--------------------
+    //-------------
+    public String LoginStatus(){
+        
+        if(loginUser(Login_UN,Login_PW) == true ){
+            if( c_UserName(Username) && c_PasswordComplexity()){ 
+                 return "A successful login" ;     
+            }else{
+               return "A failed login";
+            }  
+        }else{
+            return "A failed login";
+        }
        
     }
 // ---------------------------------------------------------------------------------//

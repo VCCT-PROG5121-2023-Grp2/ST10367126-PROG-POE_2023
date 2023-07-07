@@ -2,20 +2,21 @@ package com.POE.Test_1;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class Test6Test {
+public class Unit8_Test {
     
-    Test6 t = new Test6();
+    Test7 t = new Test7();
     
     @Test
-    public void testGetValue() {
+    public void testUnit8() {
         System.out.println("---------------------------");
-        System.out.println("Unit Test - 7");
+        System.out.println("Unit Test - 8");
         System.out.println("---------------------------\n");
+        
         t.main(null);
         Boolean actual = t.GetValue();
   
-        assertTrue("True",actual);
-        System.out.println("True");
+        assertFalse("False",actual);
+        System.out.println("False");
     }
 }
-        //----------------------------------... END OF FILE...--------------------//
+//----------------------------------... END OF FILE...--------------------//

@@ -2,7 +2,7 @@ package com.POE.Test_1;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class Test3Test {
+public class Unit4_Test {
     
     Test3 t = new Test3();
     

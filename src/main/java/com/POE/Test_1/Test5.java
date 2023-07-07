@@ -22,9 +22,10 @@ public class Test5 {
       public static void main(String[] args){
         
         MyLoginClass Test = new MyLoginClass("Jose","Lubota","kyl_1","2J@42");
-        Test.registerUser("kyl_11111","2J@4");
+
+        Test.registerStatus("kyl_11111","2J@4");
         Test.loginUser("kyl_11111", "2J@4");
-        setValue(Test.returnLoginStatus());
+        setValue(Test.LoginStatus());
     }
 
     

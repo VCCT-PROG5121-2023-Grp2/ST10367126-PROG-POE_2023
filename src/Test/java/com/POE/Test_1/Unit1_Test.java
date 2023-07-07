@@ -2,12 +2,12 @@ package com.POE.Test_1;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class Test0Test {
+public class Unit1_Test {
     
     Test0 t = new Test0();
     
     @Test
-    public void testGetValue() {
+    public void testUnit1() {
         System.out.println("---------------------------");
         System.out.println("Unit Test - 1");
         System.out.println("---------------------------\n");
